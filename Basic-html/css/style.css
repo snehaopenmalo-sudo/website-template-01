@@ -35,3 +35,44 @@ body {
   padding: 30px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
+/* Overlay */
+#leadOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 9998;
+  display: none;
+}
+
+/* Popup */
+#leadPopup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 30px;
+  width: 90%;
+  max-width: 420px;
+  border-radius: 12px;
+  z-index: 9999;
+  display: none;
+  text-align: center;
+}
+
+#leadPopup input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+#leadPopup button {
+  background: #2563eb;
+  color: #fff;
+  padding: 12px;
+  border: none;
+  width: 100%;
+  border-radius: 6px;
+}
