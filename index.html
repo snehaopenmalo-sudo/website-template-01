@@ -46,5 +46,29 @@
 
     <footer>© 2025 OpenMalo Template</footer>
   </body>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  if (!localStorage.getItem("leadSubmitted")) {
+    document.getElementById("leadOverlay").style.display = "block";
+    document.getElementById("leadPopup").style.display = "block";
+    document.body.style.overflow = "hidden";
+  }
+
+  document.getElementById("leadForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // 👉 Here you can send AJAX / Formspree / PHP
+
+    localStorage.setItem("leadSubmitted", "yes");
+
+    document.getElementById("leadOverlay").style.display = "none";
+    document.getElementById("leadPopup").style.display = "none";
+    document.body.style.overflow = "auto";
+  });
+
+});
+</script>
+
 </html>
 
